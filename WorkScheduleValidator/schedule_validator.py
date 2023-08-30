@@ -34,9 +34,6 @@ def count_overtime_hours(schedule):
         elif 0 <= day_date.weekday() <= 5:  # Monday - Saturday
             total_overtime += max(0, hours - 8)
 
-    # Calculate Sunday overtime
-    sunday_hours = schedule.get(7, 0)
-    total_overtime += max(0, sunday_hours - 8)
     return total_overtime
 
 def validate_schedule(schedule):
